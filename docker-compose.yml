@@ -20,6 +20,16 @@ services:
     #   - "net"
     ports:
       - "8081:3000"
+  react-website2:
+    image: "sankey"
+    container_name: "abbvieSankey"
+    restart: "always"
+    depends_on:
+      - "reverse-proxy"
+    # networks:
+    #   - "net"
+    ports:
+      - "8081:3000"    
 # networks:
 #   net:
 #     external: true
